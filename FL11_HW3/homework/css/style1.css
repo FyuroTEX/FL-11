@@ -1,0 +1,61 @@
+body, * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  background: #fff; }
+
+.header-wrap {
+  color: #000; }
+.header_text {
+  white-space: pre-line;
+  margin-bottom: 3em; }
+.header.header {
+  background: url("/FL11_HW3/homework/img/m-h-day.jpg") no-repeat;
+  background-size: 100%;
+  height: 900px;
+  width: 100%;
+  background-position: 0% 50%;
+  clip-path: ellipse(85% 75% at 26% 36%); }
+.header .landing-logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 175px;
+  font-weight: 600;
+  font-size: 32px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 25px 0; }
+  .header .landing-logo img {
+    height: 55px;
+    width: 55px; }
+  .header .landing-logo p {
+    line-height: 1em; }
+  .header .landing-logo span {
+    font-size: 12px;
+    display: flex;
+    justify-content: center; }
+.header_heading {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 90px;
+  font-weight: bold;
+  position: relative;
+  z-index: 0;
+  width: 50%;
+  margin: 1em 0 .5em;
+  line-height: 1em; }
+  .header_heading::after {
+    content: '';
+    position: absolute;
+    background: #14A0C7;
+    width: 20vw;
+    height: 4vh;
+    left: 0;
+    bottom: 0;
+    z-index: -1; }
+.header .header-wrap {
+  margin-left: 190px; }
