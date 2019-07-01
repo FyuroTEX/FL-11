@@ -6,14 +6,11 @@ body {
 }
 .navigation {
   background: url('../img/sample2.jpg') no-repeat;
-  background-size: 100%;
-  height: 500px;
-  width: 100%;
-  /* background-position: 0% 50%; */
+  background-size: 100% 100%;
 }
 .navigation > header {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-direction: row;
 
   padding: 3%;
@@ -22,8 +19,11 @@ body {
   text-decoration: none;
   color: #ffffff;
 }
-.navigation > header > nav > a {
-  padding: 0 3%;
+.navigation header nav {
+  margin-left: auto;
+}
+.navigation header nav a {
+  padding: 15px;
 }
 .text_column {
   background-color: #ffffff;
@@ -37,63 +37,79 @@ body {
   display: grid;
   grid-row-gap: 10px;
 }
-.title {
+.navigation .title {
   display: flex;
   flex-direction: column;
-  /* margin-top: 120px; */
-  justify-content: center;
+  margin-top: 120px;
 }
 .title p:nth-child(2) {
-  font-size: 60px;
+  font-size: 90px;
 }
-.title > div {
-  justify-items: center;
+.navigation .title > div {
+  align-self: center;
 }
 .title div p {
   display: inline;
-  font-size: 30px;
-  letter-spacing: 3px;
+  font-size: 70px;
   color: #fff;
+  letter-spacing: 20px;
 }
-.title button {
-  display: inline;
-  /* width: 200px; */
+.navigation .title h4 {
+  text-align: center;
+  color: #fff;
+  margin-top: 30px;
+}
+.buttoninfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.buttoninfo button {
+  width: 200px;
   border: 1.5px solid;
   border-color: #fff;
   background: rgba(0, 0, 0, 0.2);
-  color: #fff;
-  padding: 10px;
-  align-self: center;
+  color: #ffffff;
+  padding: 15px;
+  font-size: 20px;
   margin-top: 150px;
   margin-bottom: 80px;
 }
 
-p.left {
+.right {
   position: relative;
   color: #f3f3f3;
-  width: 625px;
   font-size: 16px;
-  padding-left: 800px;
-  padding-top: 75px;
+  padding-left: 200px;
+  padding-top: 5px;
   margin: 0px;
 }
-.text_column > div {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 1519.2px 400px 0;
-  border-color: transparent #000000 transparent transparent;
+.text_column {
+  background: linear-gradient(to top right, #f0f0f0 50%, #000000 50%);
+  height: 400px;
+}
+.text_column p {
+  font-size: 20px;
 }
 
-p.bottom {
+.left {
   color: #000000;
-  width: 450px;
   font-size: 20px;
   padding-left: 50px;
-  padding-top: 0px;
+  padding-top: 200px;
   margin: 0px;
+  z-index: 20;
 }
-
+.blocks{
+  background-color: #f0f0f0;
+  padding-bottom: 50px;
+}
+.blocks > p {
+  text-align: center;
+  margin: 15px auto 45px;
+  font-weight: normal;
+  font-size: 42px;
+}
 .blocks article div img {
   height: auto;
   width: 50%;
@@ -158,6 +174,9 @@ p.bottom {
   display: inline;
   padding: 5px;
   font-size: 1vw;
+}
+.photo{
+  padding-top: 50px;
 }
 .photo .photocard {
   display: flex;
