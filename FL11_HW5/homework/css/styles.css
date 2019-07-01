@@ -12,6 +12,9 @@
 
 body {
   font-family: roboto;
+  max-width: 1400px;
+    margin: 0 auto;  
+    padding: 0 1.5rem;
 }
 .post-1 {
 	background: #B71757;
@@ -30,3 +33,31 @@ body {
 }
 
 /* Your styles go here */
+
+
+
+
+#pageHeader {
+  grid-area: header;
+  }
+  #pageFooter {
+    grid-area: footer;
+    }
+    #pageMain {
+    grid-area: main;
+    }
+    #pageASide {
+    grid-area: aside;
+    }
+body {
+  display: grid;
+  grid-template-areas: 'header header header' 'main main aside' 'footer footer footer';
+  grid-template-rows:1ft 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr .5frr;
+  grid-gap: 0;
+
+  }
+header, aside, footer{
+  background: red;
+  /* padding: 20px; */
+}
