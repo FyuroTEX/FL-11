@@ -10,8 +10,7 @@ body {
 }
 .navigation > header {
   display: flex;
-  /* justify-content: space-between; */
-  flex-direction: row;
+   flex-direction: row;
 
   padding: 3%;
 }
@@ -100,11 +99,11 @@ body {
   margin: 0px;
   z-index: 20;
 }
-.blocks{
+.blocks {
   background-color: #f0f0f0;
   padding-bottom: 50px;
 }
-.blocks > p {
+.blocks > h2 {
   text-align: center;
   margin: 15px auto 45px;
   font-weight: normal;
@@ -123,7 +122,6 @@ body {
 .blocks article:nth-child(odd) div h6 {
   position: absolute;
   right: 35%;
-
   margin-top: 30%;
   color: #ffffff;
   font-size: 1.2vw;
@@ -148,17 +146,13 @@ body {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-
   text-indent: 3%;
   font-size: 1.2vw;
-
   align-content: space-between;
-
   justify-content: end;
 }
 .blocks article:nth-child(even) .text {
   padding: 0 0 0 5%;
-
   text-indent: 7%;
 }
 .blocks article:nth-child(odd) .text {
@@ -175,7 +169,7 @@ body {
   padding: 5px;
   font-size: 1vw;
 }
-.photo{
+.photo {
   padding-top: 50px;
 }
 .photo .photocard {
@@ -186,7 +180,6 @@ body {
 .card {
   width: 20%;
   position: relative;
-  /* height: 100%; */
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -281,8 +274,7 @@ footer {
 }
 .fnav {
   display: flex;
-  justify-content: space-between;
-  padding: 1% 0px 2% 65%;
+  margin-left: auto;
 }
 .fnav a {
   font-size: 16px;
