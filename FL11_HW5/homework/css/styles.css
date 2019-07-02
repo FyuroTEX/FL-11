@@ -1,11 +1,3 @@
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #162b4d;
-  --link: #fff;
-  --link--hover: #b8b8b8;
-  --bg-footer-color: #162b4d;
-}
-
 body {
   font-family: roboto;
   max-width: 1400px;
@@ -37,7 +29,7 @@ html {
 }
 
 html {
-  background-color: var(--bg-color--dark);
+  background-color: #0b192f;
 }
 body {
   display: grid;
@@ -63,7 +55,7 @@ header a {
 }
 .menu-button {
   background: none;
-  color: var(--link);
+  color: #fff;
   border: none;
   font-size: 2rem;
   display: none;
@@ -108,7 +100,7 @@ nav a:hover {
   opacity: 0.7;
 }
 .post-text {
-  color: var(--link);
+  color: #fff;
   box-sizing: border-box;
   padding: 3rem 9rem 0 5rem;
   position: relative;
@@ -119,16 +111,16 @@ nav a:hover {
   line-height: 1;
   letter-spacing: 1px;
   text-decoration: none;
-  color: var(--link);
+  color: #fff;
   display: inline-block;
 
   width: 90%;
 }
 .post-text > a:hover {
-  color: var(--link--hover);
+  color: #b8b8b8;
 }
 .post-text > p {
-  color: var(--link);
+  color: #fff;
 
   font-size: 1.5rem;
   font-weight: 300;
@@ -185,10 +177,10 @@ nav a:hover {
   margin: 3rem 5rem 0 3rem;
 }
 .news a:hover {
-  color: var(--link--hover);
+  color: #b8b8b8;
 }
 .news p {
-  color: var(--bg-color--dark);
+  color: #0b192f;
   box-sizing: border-box;
   margin: 1rem 4rem 0 3rem;
   font-size: 1.5rem;
