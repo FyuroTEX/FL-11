@@ -7,4 +7,4 @@ cx = +prompt('Input \'x\' point C', '');
 cy = +prompt('Input \'y\' point C', '');
 halfAxBx = (ax + bx) / 2;
 halfAyBy = (ay + by) / 2;
-halfAxBx === cx && halfAyBy === cy ? console.log('Point C lies on straight line AB') : console.log('Point C does not lie on line AB');
+console.log(halfAxBx === cx && halfAyBy === cy);
