@@ -1,0 +1,10 @@
+let ax, ay, bx, by, cx, cy, halfAxBx, halfAyBy;
+ax = +prompt('Input \'x\' point A', '');
+ay = +prompt('Input \'y\' point A', '');
+bx = +prompt('Input \'x\' point B', '');
+by = +prompt('Input \'y\' point B', '');
+cx = +prompt('Input \'x\' point C', '');
+cy = +prompt('Input \'y\' point C', '');
+halfAxBx = (ax + bx) / 2;
+halfAyBy = (ay + by) / 2;
+halfAxBx === cx && halfAyBy === cy ? console.log('Point C lies on straight line AB') : console.log('Point C does not lie on line AB');
