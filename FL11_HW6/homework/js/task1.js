@@ -1,10 +1,11 @@
 let ax, ay, bx, by, cx, cy, halfAxBx, halfAyBy;
+let d = 2;
 ax = +prompt('Input \'x\' point A', '');
 ay = +prompt('Input \'y\' point A', '');
 bx = +prompt('Input \'x\' point B', '');
 by = +prompt('Input \'y\' point B', '');
 cx = +prompt('Input \'x\' point C', '');
 cy = +prompt('Input \'y\' point C', '');
-halfAxBx = (ax + bx) / 2;
-halfAyBy = (ay + by) / 2;
+halfAxBx = (ax + bx) / d;
+halfAyBy = (ay + by) / d;
 console.log(halfAxBx === cx && halfAyBy === cy);
