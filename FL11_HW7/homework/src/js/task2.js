@@ -11,7 +11,6 @@ if (playGame) {
         switch (true) {
             case attempt === 0:
                 randomNumber = Math.floor(Math.random() * (gamePoket + 1));
-                console.log(randomNumber);
                 playerNumber = +prompt('Choose a roulette pocket number from 0 to ' + gamePoket +
                     '\n Attempts left: ' + attemptLeft[attempt] +
                     '\n Tottal prize: ' + prize +
