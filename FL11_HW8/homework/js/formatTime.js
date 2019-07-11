@@ -4,4 +4,6 @@ function formatTime(time) {
     let minuts = time % 60;
     return Math.floor(day) + ' day(s) ' + Math.floor(hour) + ' hour(s) ' + minuts + ' minute(s).';
 }
+console.log(formatTime(120));
+console.log(formatTime(59));
 console.log(formatTime(3601));
