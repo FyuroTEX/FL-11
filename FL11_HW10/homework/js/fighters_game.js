@@ -16,7 +16,7 @@ function Fighter(info) {
         let max = 100;
         if (Math.floor(Math.random() * Math.floor(max)) > enemy.getAgility()) {
             enemy.dealDamage(this.getDamage());
-            console.log(`${this.getName()} make ${this.getDamage()} to ${enemy.getName()}`);
+            console.log(`${this.getName()} make ${this.getDamage()} damage to ${enemy.getName()}`);
         } else {
             console.log(`${this.getName()} attack missed`);
         }
@@ -35,8 +35,8 @@ function Fighter(info) {
 }
 
 function battle(firstFighter, secondFighter) {
-    if (firstFighter.getHealth() === 0 || secondFighter.getHealth() === 0) {
-        console.log((firstFighter.getHealth() === 0 ? firstFighter.getName() :
+    if (firstFighter.getHealth() <= 0 || secondFighter.getHealth() <= 0) {
+        console.log((firstFighter.getHealth() <= 0 ? firstFighter.getName() :
             secondFighter.getName()) + ' is dead and can\'t fight.')
     }
     if (firstFighter.getHealth() > 0 && secondFighter.getHealth() > 0) {
@@ -45,10 +45,10 @@ function battle(firstFighter, secondFighter) {
     if (firstFighter.getHealth() > 0 && secondFighter.getHealth() > 0) {
         secondFighter.attack(firstFighter);
     }
-    if (firstFighter.getHealth() === 0) {
+    if (firstFighter.getHealth() <= 0) {
         firstFighter.addLoss();
         secondFighter.addWin();
-    } else if (secondFighter.getHealth() === 0) {
+    } else if (secondFighter.getHealth() <= 0) {
         firstFighter.addWin();
         secondFighter.addLoss();
     }
