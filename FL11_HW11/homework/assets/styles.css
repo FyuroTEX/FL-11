@@ -41,7 +41,7 @@ body {
   border: none;
   outline: none;
   background-color: transparent;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .btn i {
@@ -51,7 +51,7 @@ body {
 }
 
 .btn:hover i {
-  color: #55b1bb;
+  color: #2470fd;
 }
 
 .addTodo i {
