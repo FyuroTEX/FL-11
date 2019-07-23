@@ -18,43 +18,47 @@ function checkListItems() {
     }
 }
 
-function createNewElement(task) {
+function createNewElement(value) {
+    let li = document.createElement('li');
+    li.setAttribute('class', 'todoItem');
     let id = new Date().valueOf();
-    let listItem = document.createElement('li');
-    listItem.className = 'todoItem';
-    listItem.setAttribute('draggable', 'true');
-    listItem.setAttribute('id', id);
-
-    let checkbox = document.createElement('button');
-    checkbox.className = 'btn checkbox';
-    checkbox.innerHTML = '<i class="material-icons">check_box_outline_blank</i>';
-
+    li.setAttribute('id', id);
+    li.setAttribute('draggable', 'true');
+    let checkboxBtn = document.createElement('button');
+    checkboxBtn.setAttribute('class', 'btn checkbox');
+    li.appendChild(checkboxBtn);
+    let checkboxIcon = document.createElement('i');
+    checkboxIcon.setAttribute('class', 'material-icons');
+    checkboxIcon.innerHTML = 'check_box_outline_blank';
+    checkboxBtn.appendChild(checkboxIcon);
     let label = document.createElement('label');
-    label.innerHTML = task;
-
+    label.innerHTML = value;
+    li.appendChild(label);
     let input = document.createElement('input');
-    input.type = 'text';
+    input.setAttribute('type', 'text');
+    li.appendChild(input);
+    let btnEdit = document.createElement('button');
+    btnEdit.setAttribute('class', 'btn edit');
+    li.appendChild(btnEdit);
+    let editIcon = document.createElement('i');
+    editIcon.setAttribute('class', 'material-icons');
+    editIcon.innerHTML = 'edit';
+    btnEdit.appendChild(editIcon);
+    let btnDelete = document.createElement('button');
+    btnDelete.setAttribute('class', 'btn delete');
+    li.appendChild(btnDelete);
+    let deleteIcon = document.createElement('i');
+    deleteIcon.setAttribute('class', 'material-icons');
+    deleteIcon.innerHTML = 'delete';
+    btnDelete.appendChild(deleteIcon);
 
-    let editButton = document.createElement('button');
-    editButton.className = 'btn edit';
-    editButton.innerHTML = '<i class="material-icons">edit</i>';
 
-    let deleteButton = document.createElement('button');
-    deleteButton.className = 'btn delete';
-    deleteButton.innerHTML = '<i class="material-icons">delete</i>';
+    li.addEventListener('dragstart', dragStart);
+    li.addEventListener('dragover', dragOver);
+    li.addEventListener('drop', dragDrop);
+    li.addEventListener('dragend', dragEnd);
 
-    listItem.appendChild(checkbox);
-    listItem.appendChild(label);
-    listItem.appendChild(input);
-    listItem.appendChild(editButton);
-    listItem.appendChild(deleteButton);
-
-    listItem.addEventListener('dragstart', dragStart);
-    listItem.addEventListener('dragover', dragOver);
-    listItem.addEventListener('drop', dragDrop);
-    listItem.addEventListener('dragend', dragEnd);
-
-    return listItem;
+    return li;
 }
 
 
