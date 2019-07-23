@@ -6,10 +6,10 @@ let message = document.querySelector('.message');
 
 
 function checkListItems() {
-    let listItems = document.querySelectorAll('li');
-    const maxNumOfListItems = 10;
+    let todoItems = document.querySelectorAll('li');
+    const maxTodo = 10;
 
-    if (listItems.length === maxNumOfListItems) {
+    if (todoItems.length === maxTodo) {
         inputTask.disabled = true;
         message.innerHTML = 'Maximum item per list are created';
     } else {
