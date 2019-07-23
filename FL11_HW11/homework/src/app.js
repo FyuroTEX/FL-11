@@ -102,11 +102,11 @@ function editTask() {
 }
 
 
-function deleteTask() {
-    let listItem = this.parentNode;
-    let ul = listItem.parentNode;
-    ul.removeChild(listItem);
+function deleteTask(e) {
+    let item = e.target;
+    item.parentNode.parentNode.remove();
 }
+
 
 function bindTaskEvents(listItem) {
     let checkbox = listItem.querySelector('button.checkbox');
